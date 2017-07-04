@@ -1,8 +1,15 @@
-@extends('app')
+@extends('layouts.test')
 @section('content')
-    <h1>Order</h1>
 
     <div class="container">
+    <br><br><br><br>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{url('/home')}}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{url('/orders')}}">Order</a></li>
+        <li class="breadcrumb-item active">Details</li>
+    </ol>
+
         <table class="table table-striped table-bordered table-hover">
             <tbody>
             <tr class="bg-info">

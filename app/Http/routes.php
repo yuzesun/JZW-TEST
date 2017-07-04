@@ -10,12 +10,26 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/', function ()
 {
-    return view('welcome');
+//    User::create([
+//        'username' => 'Wen Shi',
+//        'email' => 'sun@unomaha.edu',
+//        'password' => Hash::make('password1234')
+//    ]);
+    return view('home1');
+});
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('products','ProductController');
+    Route::get('orders/search','OrderController@searchOrder');
+    Route::resource('orders','OrderController');
 });
 
 
-Route::resource('orders','OrderController');
+Route::auth();
+
+Route::get('/home1', 'HomeController@index');
+
+
 

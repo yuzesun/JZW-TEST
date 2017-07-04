@@ -1,6 +1,16 @@
-@extends('app')
+@extends('layouts.test')
+
 @section('content')
-    <h1>Create New Order</h1>
+
+    <div class="container">
+    <br><br><br><br>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{url('/home')}}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{url('/orders')}}">Order</a></li>
+            <li class="breadcrumb-item active">Create Order</li>
+        </ol>
+
     {!! Form::open(['url' => 'orders']) !!}
     <div class="form-group">
         {!! Form::label('po', 'Purchase Order Number:') !!}
@@ -27,8 +37,16 @@
         {!! Form::text('logo',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('factory', 'Manufacturer:') !!}
-        {!! Form::text('factory',null,['class'=>'form-control']) !!}
+        {!! Form::label('factory', 'Manufacturer:') !!}<br>
+        {!! Form::radio('manufacturer', 'Hong Yuan', true) !!} Hong Yuan &nbsp;&nbsp;&nbsp;&nbsp;
+        {!! Form::radio('manufacturer', 'Zhu Cheng') !!} Zhu Cheng &nbsp;&nbsp;&nbsp;&nbsp;
+        {!! Form::radio('manufacturer', 'Wu Lian') !!} Wu Lian &nbsp;&nbsp;&nbsp;&nbsp;
+        {!! Form::radio('manufacturer', 'Yao Shu Mei') !!} Yao Shu Mei &nbsp;&nbsp;&nbsp;&nbsp;
+        {!! Form::radio('manufacturer', 'Cheshire') !!} Cheshire &nbsp;&nbsp;&nbsp;&nbsp;
+        {!! Form::radio('manufacturer', 'Harvest') !!} Harvest &nbsp;&nbsp;&nbsp;&nbsp;
+        {!! Form::radio('manufacturer', 'Product & Energy') !!} Product & Energy &nbsp;&nbsp;&nbsp;&nbsp;
+        {!! Form::radio('manufacturer', 'Lin Yi') !!} Lin Yi
+
     </div>
     <div class="form-group">
         {!! Form::label('forwarder', 'Forwarder:') !!}
@@ -71,5 +89,7 @@
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
     </div>
     {!! Form::close() !!}
+    </div>
 @stop
+
 
