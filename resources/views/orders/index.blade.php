@@ -1,4 +1,4 @@
-@extends('layouts.test')
+@extends('layouts.app')
 
 @section('content')
 
@@ -28,7 +28,7 @@
                 <th class="text-center">City</th>
                 <th class="text-center">Arrival Date</th>
                 <th class="text-center">Manufacturer</th>
-                <th class="text-center">Payment Status</th>
+                <th class="text-center">Payment Status (Factory)</th>
                 <th class="text-center">Shipping Status</th>
                 <th class="text-center" colspan="3">Actions</th>
             </tr>
@@ -56,7 +56,7 @@
             </tbody>
         </table>
     @else
-        <p>Results not found</p>
+        <p>No Order is stored in the system yet.</p>
     @endif
     {{$orders->links()}}
 </div>

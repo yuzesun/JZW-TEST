@@ -14,7 +14,7 @@ class OrderController extends Controller
 
     public function index()
     {
-        $orders=order::paginate(3);
+        $orders=order::orderBy('order_date', 'DESC')->paginate(5);
 
         return view('orders.index',compact('orders'));
     }
@@ -61,11 +61,15 @@ class OrderController extends Controller
 
     public function searchOrder(Request $request) {
         $query = $request->q;
-        $orders = Order::where('po', 'LIKE', "%$query%")->paginate(3);
+        $orders = Order::where('po', 'LIKE', "%$query%")->paginate(5);
         return view('orders.index',compact('orders'));
 
     }
 
-
+    public function searchGeneralOrder(Request $request) {
+        $query = $request->q;
+        $orders = Order::where('po', '=', $query)->paginate(5);
+        return view('orders.customer-order-search-results',compact('orders'));
+    }
 
 }

@@ -1,141 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <title>JZW International</title>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>JZW International</title>
-
-    <!-- Fonts -->
-    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>--}}
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
+    {{--<link rel="stylesheet" href="animate.min.css">--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+          integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+          crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
 </head>
+
 <style>
 
-    div.relative {
-        position:relative;
-        max-width:3000px;
-        height:120px;
+    .w3-bar  {
+        padding: 4px;
     }
 
-    div.absolute {
-        position:absolute;
-        top:0px;
-        right:0px;
-        width:500px;
-        height:140px;
-        text-align:right;
-        /*border-left-style:solid;*/
-        /*border-left:1px solid gray;*/
+    p1 {
+        font-family:"Comic Sans MS", cursive, sans-serif;
+        font-size:115%;
     }
-    nav1 {
-        max-width:260px;
-        margin:10px;
-        padding:1em;
+    p10 {
+        font-family:"Comic Sans MS", cursive, sans-serif;
+        font-size:20px;
     }
-    nav1 ul{
-        list-style-type:none;
-        padding:0;
+    h5 {
+        font-family:"Comic Sans MS", cursive, sans-serif;
+        font-size:190%;
+    }
+    .button2 {
+        padding:12px 20px;
+    }
+    h6 {
+        font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+        font-size: 30px;
     }
 
-    nav1 ul a{
-        text-decoration:none;
+    h7 {
+        font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+        font-size: 28px;
     }
+
+    p8 {
+        font-family: 'Allan';
+        font-size: 30px;
+    }
+
+    p9 {
+        font-family: 'Allan';
+        font-size: 28px;
+    }
+
 </style>
+
 <body>
-    <div class="container relative" style="top:10px">
-        <a href="{{ url('/') }}">
-            <img src="{{asset('/images/JZW_stacked_full_color.jpg')}}" class="img-rounded" width="180px">
-        </a>
-        <div class="container absolute">
-            <nav1>
-                <ul style="line-height:25px">
-                    <li>JZW International Development, LLC</li>
-                    <li>4245 S.143rd Circle</li>
-                    <li>Suite #5</li>
-                    <li>Omaha, Nebraska 68137</li>
-                    <li>(402) 933-8876</li>
-                </ul>
-            </nav1>
-        </div>
-    </div>
-    <br>
-    <br>
 
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card-2" id="myNavbar">
+        @if (Auth::guest())
+            <a href="{{ url('/') }}" style="padding: 16px;">
+                <img src={{asset('/images/JZW_full_color.jpg')}} width="230" height="55">
+            </a>
+        @else
+            <a href="{{ url('/') }}" style="padding: 16px;">
+                <img src={{asset('/images/JZW_full_color.jpg')}} width="230" height="55">
+            </a>
+        @endif
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small w3-padding">
 
-    <div class="container">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                {{--<div class="navbar-header">--}}
-                    {{--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">--}}
-                        {{--<span class="sr-only">Toggle navigation</span>--}}
-                        {{--<span class="icon-bar"></span>--}}
-                        {{--<span class="icon-bar"></span>--}}
-                        {{--<span class="icon-bar"></span>--}}
-                    {{--</button>--}}
-                {{--</div>--}}
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{ url('/home') }}">Home <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Service</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Roofing Nails</a></li>
-                                <li><a href="#">Plastic Nails</a></li>
-                                <li><a href="#">Staples</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">T-Shirts</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Services</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">About Us</a></li>
-
-                            <form class="navbar-form navbar-right">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Purchase Order Number">
-                                </div>
-                                <button type="submit" class="btn btn-default">Track an Order</button>
-                            </form>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Administrator</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
-                        @else
-                            <li><a href="{{ action('OrderController@index') }}">Orders</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
+            <div class="search-bar" style="float: left">
+                {{ Form::open(['method'=> 'GET', 'action' => 'OrderController@searchGeneralOrder']) }}
+                {{Form::input('text','q', null, ['placeholder' => 'Purchase order number...','class'=>'w3-bar-item w3-input w3-border form-control', 'autocomplete'=>'off'])}}
+                <button type="submit" href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></button>
+                {{ Form::close() }}
             </div>
-        </nav>
+            <a href="/jzw_international/public/#products" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Products</a>
+            <a href="/jzw_international/public/#services" class="w3-bar-item w3-button"><i class="fa fa-truck"></i> Services</a>
+            <a href="/jzw_international/public/#contact" class="w3-bar-item w3-button"><i class="fa fa-fax"></i> Contact</a>
+            <a href="/jzw_international/public/#about" class="w3-bar-item w3-button"><i class="fa fa-book"></i> About</a>
+            @if (Auth::guest())
+                <a href="{{ url('/login') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Administrator</a>
+            @else
+                <a href="{{ action('OrderController@index') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Administrator</a>
+                <a href="{{ url('/logout') }}" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i>Logout</a>
+            @endif
 
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
-    @yield('content')
+</div>
 
-    <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+
+<!-- Navbar on small screens -->
+<nav1 class="w3-bar-block w3-white w3-top w3-hide-large w3-hide-medium"
+     style="display:none;margin-top:58px;" id="navDemo">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-close"></i> Close</a>
+    <a href="/jzw_international/public/#track_order" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-search"></i> Track an Order</a>
+    <a href="/jzw_international/public/#products" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-th"></i> Products</a>
+    <a href="/jzw_international/public/#services" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-truck"></i> Services</a>
+    <a href="/jzw_international/public/#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-fax"></i> Contact</a>
+    <a href="/jzw_international/public/#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-book"></i> About</a>
+</nav1>
+
+<!-- Header -->
+@yield('content')
+
+<script>
+
+    function w3_open() {
+        document.getElementById("navDemo").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("navDemo").style.display = "none";
+    }
+
+
+</script>
+
 </body>
 </html>
+

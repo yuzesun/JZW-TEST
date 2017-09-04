@@ -11,7 +11,7 @@ class Order extends Model
     protected $fillable=[
         'po',
         'order_date',
-        'cust_number',
+        'customer_name',
         'city',
         'state',
         'zip_code',
@@ -24,7 +24,10 @@ class Order extends Model
         'shipping_date',
         'arrival_date',
         'payment_status',
+        'payment_status_customer',
+        'payment_date_customer',
         'shipping_status',
+        'note',
     ];
 
 

@@ -1,4 +1,4 @@
-@extends('layouts.test')
+@extends('layouts.app')
 @section('content')
 
     <div class="container">
@@ -20,6 +20,10 @@
             <tr>
                 <td>Order Date</td>
                 <td><?php echo date("m/d/Y",strtotime($order['order_date'])); ?></td>
+            </tr>
+            <tr>
+                <td>Customer Name</td>
+                <td><?php echo ($order['customer_name']); ?></td>
             </tr>
             <tr>
                 <td>City</td>
@@ -66,12 +70,24 @@
                 <td><?php echo date("m/d/Y",strtotime($order['arrival_date'])); ?></td>
             </tr>
             <tr>
-                <td>Payment Status</td>
+                <td>Payment Status (Factory)</td>
                 <td><?php echo ($order['payment_status']); ?></td>
+            </tr>
+            <tr>
+                <td>Payment Status (Customer)</td>
+                <td><?php echo ($order['payment_status_customer']); ?></td>
+            </tr>
+            <tr>
+                <td>Payment Date (Customer)</td>
+                <td><?php echo date("m/d/Y",strtotime($order['payment_date_customer'])); ?></td>
             </tr>
             <tr>
                 <td>Shipping Status</td>
                 <td><?php echo ($order['shipping_status']); ?></td>
+            </tr>
+            <tr>
+                <td>Note</td>
+                <td><?php echo ($order['note']); ?></td>
             </tr>
             </tbody>
         </table>

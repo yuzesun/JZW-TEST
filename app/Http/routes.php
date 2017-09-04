@@ -17,19 +17,24 @@ Route::get('/', function ()
 //        'email' => 'sun@unomaha.edu',
 //        'password' => Hash::make('password1234')
 //    ]);
-    return view('home1');
+    return view('home');
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::resource('products','ProductController');
     Route::get('orders/search','OrderController@searchOrder');
     Route::resource('orders','OrderController');
 });
 
+Route::get('order/search','OrderController@searchGeneralOrder');
+
+/*Route::group(['prefix' => 'admin'], function() {
+    Route::get('register', 'Auth\AuthController@showRegistrationForm');
+    Route::post('register', 'Auth\AuthController@register');
+});*/
 
 Route::auth();
 
-Route::get('/home1', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 
 
 
