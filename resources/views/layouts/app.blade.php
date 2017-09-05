@@ -22,6 +22,7 @@
           integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
           crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
 </head>
 
 <style>
@@ -31,15 +32,15 @@
     }
 
     p1 {
-        font-family:"Comic Sans MS", cursive, sans-serif;
+        font-family:"Didact Gothic";
         font-size:115%;
     }
     p10 {
-        font-family:"Comic Sans MS", cursive, sans-serif;
+        font-family:"Didact Gothic";
         font-size:20px;
     }
     h5 {
-        font-family:"Comic Sans MS", cursive, sans-serif;
+        font-family:"Didact Gothic";
         font-size:190%;
     }
     .button2 {
