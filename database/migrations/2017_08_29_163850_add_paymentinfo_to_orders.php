@@ -14,7 +14,7 @@ class AddPaymentinfoToOrders extends Migration
     {
         Schema::table('orders', function($table) {
             $table->string('payment_status_customer');
-            $table->date('payment_date_customer');
+            $table->date('payment_date_customer')->nullable();
         });
     }
 
