@@ -72,4 +72,6 @@ class OrderController extends Controller
         return view('orders.customer-order-search-results',compact('orders'));
     }
 
+
+
 }
