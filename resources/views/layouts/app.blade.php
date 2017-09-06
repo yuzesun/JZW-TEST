@@ -90,10 +90,10 @@
                 <button type="submit" href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></button>
                 {{ Form::close() }}
             </div>
-            <a href="/jzw_international/public/#products" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Products</a>
-            <a href="/jzw_international/public/#services" class="w3-bar-item w3-button"><i class="fa fa-truck"></i> Services</a>
-            <a href="/jzw_international/public/#contact" class="w3-bar-item w3-button"><i class="fa fa-fax"></i> Contact</a>
-            <a href="/jzw_international/public/#about" class="w3-bar-item w3-button"><i class="fa fa-book"></i> About</a>
+            <a href="#products" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Products</a>
+            <a href="#services" class="w3-bar-item w3-button"><i class="fa fa-truck"></i> Services</a>
+            <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-fax"></i> Contact</a>
+            <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-book"></i> About</a>
             @if (Auth::guest())
                 <a href="{{ url('/login') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Administrator</a>
             @else
@@ -115,11 +115,11 @@
 <nav1 class="w3-bar-block w3-white w3-top w3-hide-large w3-hide-medium"
      style="display:none;margin-top:58px;" id="navDemo">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-close"></i> Close</a>
-    <a href="/jzw_international/public/#track_order" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-search"></i> Track an Order</a>
-    <a href="/jzw_international/public/#products" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-th"></i> Products</a>
-    <a href="/jzw_international/public/#services" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-truck"></i> Services</a>
-    <a href="/jzw_international/public/#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-fax"></i> Contact</a>
-    <a href="/jzw_international/public/#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-book"></i> About</a>
+    <a href="#track_order" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-search"></i> Track an Order</a>
+    <a href="#products" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-th"></i> Products</a>
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-truck"></i> Services</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-fax"></i> Contact</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16"><i class="fa fa-book"></i> About</a>
 </nav1>
 
 <!-- Header -->
