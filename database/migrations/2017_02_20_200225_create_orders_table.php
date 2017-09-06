@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('customer_name');
             $table->string('city');
             $table->string('state');
-            $table->integer('zip_code');
+            $table->string('zip_code');
             $table->string('logo');
             $table->string('factory');
             $table->string('forwarder');
