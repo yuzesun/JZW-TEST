@@ -110,7 +110,6 @@
     </div>
 </div>
 
-
 <!-- Navbar on small screens -->
 <nav1 class="w3-bar-block w3-white w3-top w3-hide-large w3-hide-medium"
      style="display:none;margin-top:58px;" id="navDemo">
