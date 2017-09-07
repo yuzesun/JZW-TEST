@@ -69,7 +69,7 @@
     #myBtn {
         display: none;
         position: fixed;
-        bottom: 20px;
+        bottom: 99px;
         right: 30px;
         z-index: 99;
         border: none;
