@@ -14,22 +14,22 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('po')->unique()->nullable();
-            $table->date('order_date')->nullable();
-            $table->string('customer_name')->nullable();
-            $table->string('city')->nullable();
-            $table->string('state')->nullable();
-            $table->string('zip_code')->nullable();
-            $table->string('logo')->nullable();
-            $table->string('factory')->nullable();
-            $table->string('forwarder')->nullable();
-            $table->float('freight')->nullable();
-            $table->string('port')->nullable();
-            $table->float('value')->nullable();
-            $table->date('shipping_date')->nullable();
-            $table->date('arrival_date')->nullable();
-            $table->string('payment_status')->nullable();
-            $table->string('shipping_status')->nullable();
+            $table->string('po')->unique();
+            $table->date('order_date');
+            $table->string('customer_name');
+            $table->string('city');
+            $table->string('state');
+            $table->string('zip_code');
+            $table->string('logo');
+            $table->string('factory');
+            $table->string('forwarder');
+            $table->float('freight');
+            $table->string('port');
+            $table->float('value');
+            $table->date('shipping_date');
+            $table->date('arrival_date');
+            $table->string('payment_status');
+            $table->string('shipping_status');
             $table->timestamps();
         });
     }

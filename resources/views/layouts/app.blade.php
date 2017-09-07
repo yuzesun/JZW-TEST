@@ -116,7 +116,7 @@
             <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-fax"></i> Contact</a>
             <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-book"></i> About</a>
             @if (Auth::guest())
-                <a href="{{ url('/login') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Administrator</a>
+                {{--<a href="{{ url('/login') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Administrator</a>--}}
             @else
                 <a href="{{ action('OrderController@index') }}" class="w3-bar-item w3-button"><i class="fa fa-cubes"></i> Orders</a>
                 <a href="{{ url('/logout') }}" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i>Logout</a>
