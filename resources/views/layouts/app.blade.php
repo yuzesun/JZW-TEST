@@ -66,6 +66,25 @@
         font-size: 28px;
     }
 
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #2c96ff;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    #myBtn:hover {
+        background-color: #21d4ff;
+    }
+
 </style>
 
 <body>
@@ -86,8 +105,10 @@
 
             <div class="search-bar" style="float: left">
                 {{ Form::open(['method'=> 'GET', 'action' => 'OrderController@searchGeneralOrder']) }}
-                {{Form::input('text','q', null, ['placeholder' => 'Purchase order number...','class'=>'w3-bar-item w3-input w3-border form-control', 'autocomplete'=>'off'])}}
-                <button type="submit" href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></button>
+                {{Form::input('text','q', null, ['placeholder' => 'Purchase order number...',
+                'class'=>'w3-bar-item w3-input w3-border form-control', 'autocomplete'=>'off'])}}
+                <button type="submit" href="#" class="w3-bar-item w3-button">
+                    <i class="fa fa-search"></i></button>
                 {{ Form::close() }}
             </div>
             <a href="#products" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Products</a>

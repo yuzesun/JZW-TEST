@@ -24,9 +24,14 @@
         <br><br><br><br>
         <h5 class="text-center">Track an Order</h5>
         <br>
-        {{Form::open(['method'=> 'GET', 'action' => 'OrderController@searchGeneralOrder']) }}
-        {{Form::input('text','q', null, ['placeholder' => 'Purchase order number...','class'=>'w3-bar-item w3-input w3-border form-control w3-center', 'autocomplete'=>'off'])}}
-        {{Form::close() }}
+        <div class="search-bar">
+            {{Form::open(['method'=> 'GET', 'action' => 'OrderController@searchGeneralOrder']) }}
+            {{Form::input('text','q', null, ['placeholder' => 'Purchase order number...',
+            'class'=>'w3-bar-item w3-input w3-border form-control w3-center', 'autocomplete'=>'off'])}}
+            <button type="submit" href="#" class="w3-bar-item w3-button">
+                <i class="fa fa-search"></i></button>
+            {{Form::close() }}
+        </div>
     </div>
 
 <!-- Product Section -->
@@ -167,8 +172,10 @@
     </div>
     <!-- End page content -->
 </div>
-
 </div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
@@ -178,6 +185,23 @@
 @yield('content')
 
 <script>
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 
     function w3_open() {
         document.getElementById("navDemo").style.display = "block";
