@@ -13,7 +13,7 @@ class AddNoteToOrders extends Migration
     public function up()
     {
         Schema::table('orders', function($table) {
-           $table->string('note');
+           $table->string('note')->nullable();
         });
     }
 
