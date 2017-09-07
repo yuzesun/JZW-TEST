@@ -28,8 +28,8 @@
             {{Form::open(['method'=> 'GET', 'action' => 'OrderController@searchGeneralOrder']) }}
             {{Form::input('text','q', null, ['placeholder' => 'Purchase order number...',
             'class'=>'w3-bar-item w3-input w3-border form-control w3-center', 'autocomplete'=>'off'])}}
-            <button type="submit" href="#" class="w3-bar-item w3-button">
-                <i class="fa fa-search"></i></button>
+            {{--<button style="float: left" type="submit" href="#" class="w3-bar-item w3-button">--}}
+                {{--<i class="fa fa-search"></i></button>--}}
             {{Form::close() }}
         </div>
     </div>
