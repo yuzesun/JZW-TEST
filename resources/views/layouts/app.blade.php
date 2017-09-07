@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>--}}
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     {{--<link rel="stylesheet" href="animate.min.css">--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -95,7 +95,7 @@
             <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-fax"></i> Contact</a>
             <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-book"></i> About</a>
             @if (Auth::guest())
-                {{--<a href="{{ url('/login') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Administrator</a>--}}
+                <a href="{{ url('/login') }}" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Administrator</a>
             @else
                 <a href="{{ action('OrderController@index') }}" class="w3-bar-item w3-button"><i class="fa fa-cubes"></i> Orders</a>
                 <a href="{{ url('/logout') }}" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i>Logout</a>
