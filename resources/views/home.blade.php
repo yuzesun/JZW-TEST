@@ -24,12 +24,14 @@
         <br><br><br><br>
         <h5 class="text-center">Track an Order</h5>
         <br>
-        <div class="search-bar">
+        <div class="search-bar" style="">
             {{Form::open(['method'=> 'GET', 'action' => 'OrderController@searchGeneralOrder']) }}
             {{Form::input('text','q', null, ['placeholder' => 'Purchase order number...',
             'class'=>'w3-bar-item w3-input w3-border form-control w3-center', 'autocomplete'=>'off'])}}
-            {{--<button style="float: left" type="submit" href="#" class="w3-bar-item w3-button">--}}
+            {{--<div class="" style="float:right">--}}
+            {{--<button type="submit" href="#" class="w3-bar-item w3-button">--}}
                 {{--<i class="fa fa-search"></i></button>--}}
+            {{--</div>--}}
             {{Form::close() }}
         </div>
     </div>
